@@ -22,14 +22,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity vhdl_clockdivider_1920 is
+entity vhdl_clockdivider_by_8 is
   Port ( 
         clk_in:         in  std_logic;
         clk_out1:       out std_logic        
         );
-end vhdl_clockdivider_1920;
+end vhdl_clockdivider_by_8;
 
-architecture Behavioral of vhdl_clockdivider_1920 is
+architecture Behavioral of vhdl_clockdivider_by_8 is
     signal  clk_inter:  std_logic :='0';
 begin
 

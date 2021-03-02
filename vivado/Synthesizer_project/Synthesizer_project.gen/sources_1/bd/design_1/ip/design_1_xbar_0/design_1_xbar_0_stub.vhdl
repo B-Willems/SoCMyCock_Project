@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Thu Feb 25 12:39:19 2021
+-- Date        : Thu Feb 25 12:39:18 2021
 -- Host        : DESKTOP-MHB0GHL running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               e:/github/SoCMyCock_Project/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_xbar_0 -prefix
+--               design_1_xbar_0_ design_1_xbar_0_stub.vhdl
 -- Design      : design_1_xbar_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z007sclg225-1

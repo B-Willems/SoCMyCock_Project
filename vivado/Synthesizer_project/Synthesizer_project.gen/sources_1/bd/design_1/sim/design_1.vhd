@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Thu Feb 25 12:35:47 2021
---Host        : DESKTOP-MHB0GHL running 64-bit major release  (build 9200)
+--Date        : Tue Mar  2 12:34:35 2021
+--Host        : DESKTOP-N24P1LS running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
 --Purpose     : IP block netlist
@@ -1075,7 +1075,7 @@ entity design_1 is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    irq_0 : out STD_LOGIC;
+    MCLK : out STD_LOGIC;
     lrclk_out_0 : out STD_LOGIC;
     sclk_out_0 : out STD_LOGIC;
     sdata_0_in_0 : in STD_LOGIC;
@@ -1282,7 +1282,6 @@ architecture STRUCTURE of design_1 is
     clk_out1 : out STD_LOGIC
   );
   end component design_1_vhdl_clockdivider_by_1_0;
-  signal i2s_transmitter_0_irq : STD_LOGIC;
   signal i2s_transmitter_0_sdata_0_out : STD_LOGIC;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -1387,6 +1386,7 @@ architecture STRUCTURE of design_1 is
   signal NLW_i2s_receiver_0_m_axis_aud_tvalid_UNCONNECTED : STD_LOGIC;
   signal NLW_i2s_receiver_0_m_axis_aud_tdata_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_i2s_receiver_0_m_axis_aud_tid_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_i2s_transmitter_0_irq_UNCONNECTED : STD_LOGIC;
   signal NLW_i2s_transmitter_0_s_axis_aud_tready_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_I2C0_SCL_O_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_I2C0_SCL_T_UNCONNECTED : STD_LOGIC;
@@ -1427,8 +1427,6 @@ architecture STRUCTURE of design_1 is
   attribute X_INTERFACE_INFO of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
-  attribute X_INTERFACE_INFO of irq_0 : signal is "xilinx.com:signal:interrupt:1.0 INTR.IRQ_0 INTERRUPT";
-  attribute X_INTERFACE_PARAMETER of irq_0 : signal is "XIL_INTERFACENAME INTR.IRQ_0, PortWidth 1, SENSITIVITY LEVEL_HIGH";
   attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
   attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
   attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
@@ -1438,11 +1436,11 @@ architecture STRUCTURE of design_1 is
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
-  irq_0 <= i2s_transmitter_0_irq;
+  MCLK <= processing_system7_0_FCLK_CLK1;
+  lrclk_out_0 <= vhdl_clockdivider_by_1_clk_out1;
+  sclk_out_0 <= vhdl_clockdivider_by_0_clk_out1;
   sdata_0_in_0_1 <= sdata_0_in_0;
   sdata_0_out_0 <= i2s_transmitter_0_sdata_0_out;
-  lrclk_out_0 <= 'Z';
-  sclk_out_0 <= 'Z';
 i2s_receiver_0: component design_1_i2s_receiver_0_1
      port map (
       aud_mclk => processing_system7_0_FCLK_CLK1,
@@ -1480,7 +1478,7 @@ i2s_transmitter_0: component design_1_i2s_transmitter_0_1
      port map (
       aud_mclk => processing_system7_0_FCLK_CLK1,
       aud_mrst => rst_ps7_0_50M_peripheral_reset(0),
-      irq => i2s_transmitter_0_irq,
+      irq => NLW_i2s_transmitter_0_irq_UNCONNECTED,
       lrclk_in => vhdl_clockdivider_by_1_clk_out1,
       s_axi_ctrl_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_ctrl_araddr(7 downto 0) => ps7_0_axi_periph_M01_AXI_ARADDR(7 downto 0),

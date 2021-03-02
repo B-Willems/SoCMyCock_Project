@@ -1,0 +1,177 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Feb 27 14:11:18 2021
+# Process ID: 10344
+# Current directory: D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9956 D:\Downloads\SoCMyCock_Project-main\vivado\Synthesizer_project\Synthesizer_project.xpr
+# Log file: D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/vivado.log
+# Journal file: D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.xpr
+INFO: [Project 1-313] Project file moved from 'E:/github/SoCMyCock_Project/vivado/Synthesizer_project' since last save.
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/Bram/AppData/Roaming/Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store'.
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.ip_user_files', nor could it be found using path 'E:/github/SoCMyCock_Project/vivado/Synthesizer_project/Synthesizer_project.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1101.852 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_module_reference design_1_vhdl_clockdivider_by_0_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Reading block design file <D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:i2s_receiver:1.0 - i2s_receiver_0
+Adding component instance block -- xilinx.com:ip:i2s_transmitter:1.0 - i2s_transmitter_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:module_ref:vhdl_clockdivider_by_8:1.0 - vhdl_clockdivider_by_0
+Adding component instance block -- xilinx.com:module_ref:vhdl_clockdivider_by_64:1.0 - vhdl_clockdivider_by_1
+Successfully read diagram <design_1> from block design file <D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.srcs/sources_1/bd/design_1/design_1.bd>
+Upgrading 'D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_vhdl_clockdivider_by_0_0 from vhdl_clockdivider_by_8_v1_0 1.0 to vhdl_clockdivider_by_8_v1_0 1.0
+WARNING: [BD 41-597] NET <i2s_transmitter_0_sclk_out> has no source
+WARNING: [BD 41-597] NET <i2s_transmitter_0_lrclk_out> has no source
+Wrote  : <D:\Downloads\SoCMyCock_Project-main\vivado\Synthesizer_project\Synthesizer_project.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+upgrade_ip: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1175.758 ; gain = 73.906
+update_module_reference: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1175.758 ; gain = 73.906
+update_module_reference design_1_vhdl_clockdivider_by_1_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_vhdl_clockdivider_by_1_0 from vhdl_clockdivider_by_64_v1_0 1.0 to vhdl_clockdivider_by_64_v1_0 1.0
+WARNING: [BD 41-597] NET <i2s_transmitter_0_sclk_out> has no source
+WARNING: [BD 41-597] NET <i2s_transmitter_0_lrclk_out> has no source
+Wrote  : <D:\Downloads\SoCMyCock_Project-main\vivado\Synthesizer_project\Synthesizer_project.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+CRITICAL WARNING: [BD 41-1343] Reset pin /i2s_receiver_0/aud_mrst (associated clock /i2s_receiver_0/aud_mclk) is connected to reset source /rst_ps7_0_50M/peripheral_reset (synchronous to clock source /processing_system7_0/FCLK_CLK0).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK1.
+CRITICAL WARNING: [BD 41-1343] Reset pin /i2s_transmitter_0/aud_mrst (associated clock /i2s_transmitter_0/aud_mclk) is connected to reset source /rst_ps7_0_50M/peripheral_reset (synchronous to clock source /processing_system7_0/FCLK_CLK0).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK1.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/i2s_transmitter_0/s_axis_aud_tvalid
+
+WARNING: [BD 41-597] NET <i2s_transmitter_0_sclk_out> has no source
+WARNING: [BD 41-597] NET <i2s_transmitter_0_lrclk_out> has no source
+Wrote  : <D:\Downloads\SoCMyCock_Project-main\vivado\Synthesizer_project\Synthesizer_project.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-166] Source port for the net:i2s_transmitter_0_sclk_out is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:i2s_transmitter_0_lrclk_out is NULL! Connection will be grounded!
+VHDL Output written to : d:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-166] Source port for the net:i2s_transmitter_0_sclk_out is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:i2s_transmitter_0_lrclk_out is NULL! Connection will be grounded!
+VHDL Output written to : d:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : d:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block vhdl_clockdivider_by_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block vhdl_clockdivider_by_1 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'design_1_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_1_auto_pc_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file d:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file d:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File d:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 1811518d178459a7; cache size = 6.984 MB.
+[Sat Feb 27 14:13:23 2021] Launched design_1_vhdl_clockdivider_by_1_0_synth_1, design_1_vhdl_clockdivider_by_0_0_synth_1...
+Run output will be captured here:
+design_1_vhdl_clockdivider_by_1_0_synth_1: D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.runs/design_1_vhdl_clockdivider_by_1_0_synth_1/runme.log
+design_1_vhdl_clockdivider_by_0_0_synth_1: D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.runs/design_1_vhdl_clockdivider_by_0_0_synth_1/runme.log
+[Sat Feb 27 14:13:24 2021] Launched synth_1...
+Run output will be captured here: D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1389.336 ; gain = 172.469
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z007sclg225-1
+INFO: [Device 21-403] Loading part xc7z007sclg225-1
+INFO: [Project 1-454] Reading design checkpoint 'd:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_i2s_receiver_0_1/design_1_i2s_receiver_0_1.dcp' for cell 'design_1_i/i2s_receiver_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_i2s_transmitter_0_1/design_1_i2s_transmitter_0_1.dcp' for cell 'design_1_i/i2s_transmitter_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_vhdl_clockdivider_by_0_0/design_1_vhdl_clockdivider_by_0_0.dcp' for cell 'design_1_i/vhdl_clockdivider_by_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_vhdl_clockdivider_by_1_0/design_1_vhdl_clockdivider_by_1_0.dcp' for cell 'design_1_i/vhdl_clockdivider_by_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.160 . Memory (MB): peak = 1582.590 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 132 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+WARNING: [Vivado 12-2489] -input_jitter contains time 1.328550 which will be rounded to 1.329 to ensure it is an integer multiple of 1 picosecond [d:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc:21]
+Finished Parsing XDC File [d:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [d:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [d:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [d:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [d:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.srcs/constrs_1/new/constraints.xdc]
+WARNING: [XPM_CDC_ARRAY_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/CDC_AESCHSTS_INST 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+WARNING: [XPM_CDC_ARRAY_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/CDC_AESCHSTS_INST 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/CDC_VALIDITY_AXIS_INST 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/CDC_ENABLE_AXIS_INST 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/CDC_VALIDITY_AXISCLK_INST 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/CDC_ENABLE_AXIS_INST 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Project 1-1715] 6 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2280.305 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 2281.312 ; gain = 878.586
+set_property IOSTANDARD LVCMOS33 [get_ports [list sdata_0_in_0]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list irq_0]]
+set_property package_pin "" [get_ports [list  lrclk_out_0]]
+set_property package_pin "" [get_ports [list  sclk_out_0]]
+set_property package_pin "" [get_ports [list  sdata_0_in_0]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 2344.250 ; gain = 6.141
+[Sat Feb 27 14:19:26 2021] Launched impl_1...
+Run output will be captured here: D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 27 14:21:37 2021...

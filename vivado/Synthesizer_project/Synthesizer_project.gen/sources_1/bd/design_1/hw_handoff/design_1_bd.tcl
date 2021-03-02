@@ -169,7 +169,7 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
-  set irq_0 [ create_bd_port -dir O -type intr irq_0 ]
+  set MCLK [ create_bd_port -dir O MCLK ]
   set lrclk_out_0 [ create_bd_port -dir O lrclk_out_0 ]
   set sclk_out_0 [ create_bd_port -dir O sclk_out_0 ]
   set sdata_0_in_0 [ create_bd_port -dir I sdata_0_in_0 ]
@@ -312,7 +312,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_FCLK_CLK3_BUF {FALSE} \
    CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {22.579} \
-   CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {2.822375} \
+   CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA3_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA_FCLK0_ENABLE {1} \
    CONFIG.PCW_FPGA_FCLK1_ENABLE {1} \
@@ -769,18 +769,15 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins i2s_transmitter_0/s_axi_ctrl] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
 
   # Create port connections
-  connect_bd_net -net i2s_transmitter_0_irq [get_bd_ports irq_0] [get_bd_pins i2s_transmitter_0/irq]
-  connect_bd_net -net i2s_transmitter_0_lrclk_out [get_bd_ports lrclk_out_0]
-  connect_bd_net -net i2s_transmitter_0_sclk_out [get_bd_ports sclk_out_0]
   connect_bd_net -net i2s_transmitter_0_sdata_0_out [get_bd_ports sdata_0_out_0] [get_bd_pins i2s_transmitter_0/sdata_0_out]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins i2s_receiver_0/m_axis_aud_aclk] [get_bd_pins i2s_receiver_0/s_axi_ctrl_aclk] [get_bd_pins i2s_transmitter_0/s_axi_ctrl_aclk] [get_bd_pins i2s_transmitter_0/s_axis_aud_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
-  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins i2s_receiver_0/aud_mclk] [get_bd_pins i2s_transmitter_0/aud_mclk] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins vhdl_clockdivider_by_0/clk_in]
+  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_ports MCLK] [get_bd_pins i2s_receiver_0/aud_mclk] [get_bd_pins i2s_transmitter_0/aud_mclk] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins vhdl_clockdivider_by_0/clk_in]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins i2s_receiver_0/m_axis_aud_aresetn] [get_bd_pins i2s_receiver_0/s_axi_ctrl_aresetn] [get_bd_pins i2s_transmitter_0/s_axi_ctrl_aresetn] [get_bd_pins i2s_transmitter_0/s_axis_aud_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
   connect_bd_net -net rst_ps7_0_50M_peripheral_reset [get_bd_pins i2s_receiver_0/aud_mrst] [get_bd_pins i2s_transmitter_0/aud_mrst] [get_bd_pins rst_ps7_0_50M/peripheral_reset]
   connect_bd_net -net sdata_0_in_0_1 [get_bd_ports sdata_0_in_0] [get_bd_pins i2s_receiver_0/sdata_0_in]
-  connect_bd_net -net vhdl_clockdivider_by_0_clk_out1 [get_bd_pins i2s_receiver_0/sclk_in] [get_bd_pins i2s_transmitter_0/sclk_in] [get_bd_pins vhdl_clockdivider_by_0/clk_out1] [get_bd_pins vhdl_clockdivider_by_1/clk_in]
-  connect_bd_net -net vhdl_clockdivider_by_1_clk_out1 [get_bd_pins i2s_receiver_0/lrclk_in] [get_bd_pins i2s_transmitter_0/lrclk_in] [get_bd_pins vhdl_clockdivider_by_1/clk_out1]
+  connect_bd_net -net vhdl_clockdivider_by_0_clk_out1 [get_bd_ports sclk_out_0] [get_bd_pins i2s_receiver_0/sclk_in] [get_bd_pins i2s_transmitter_0/sclk_in] [get_bd_pins vhdl_clockdivider_by_0/clk_out1] [get_bd_pins vhdl_clockdivider_by_1/clk_in]
+  connect_bd_net -net vhdl_clockdivider_by_1_clk_out1 [get_bd_ports lrclk_out_0] [get_bd_pins i2s_receiver_0/lrclk_in] [get_bd_pins i2s_transmitter_0/lrclk_in] [get_bd_pins vhdl_clockdivider_by_1/clk_out1]
 
   # Create address segments
   assign_bd_address -offset 0x43C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs i2s_receiver_0/s_axi_ctrl/Reg] -force

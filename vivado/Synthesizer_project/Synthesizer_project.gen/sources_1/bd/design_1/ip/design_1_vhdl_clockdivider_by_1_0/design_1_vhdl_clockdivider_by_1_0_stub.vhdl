@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Thu Feb 25 12:39:09 2021
--- Host        : DESKTOP-MHB0GHL running 64-bit major release  (build 9200)
+-- Date        : Tue Mar  2 11:51:11 2021
+-- Host        : DESKTOP-N24P1LS running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               e:/github/SoCMyCock_Project/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_vhdl_clockdivider_by_1_0/design_1_vhdl_clockdivider_by_1_0_stub.vhdl
+--               c:/FPGA/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/ip/design_1_vhdl_clockdivider_by_1_0/design_1_vhdl_clockdivider_by_1_0_stub.vhdl
 -- Design      : design_1_vhdl_clockdivider_by_1_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z007sclg225-1

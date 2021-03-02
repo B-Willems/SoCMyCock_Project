@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Thu Feb 25 12:35:47 2021
---Host        : DESKTOP-MHB0GHL running 64-bit major release  (build 9200)
+--Date        : Tue Mar  2 12:34:35 2021
+--Host        : DESKTOP-N24P1LS running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
 --Purpose     : IP block netlist
@@ -34,7 +34,7 @@ entity design_1_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    irq_0 : out STD_LOGIC;
+    MCLK : out STD_LOGIC;
     lrclk_out_0 : out STD_LOGIC;
     sclk_out_0 : out STD_LOGIC;
     sdata_0_in_0 : in STD_LOGIC;
@@ -45,6 +45,14 @@ end design_1_wrapper;
 architecture STRUCTURE of design_1_wrapper is
   component design_1 is
   port (
+    sdata_0_out_0 : out STD_LOGIC;
+    sdata_0_in_0 : in STD_LOGIC;
+    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 31 downto 0 );
+    FIXED_IO_ddr_vrn : inout STD_LOGIC;
+    FIXED_IO_ddr_vrp : inout STD_LOGIC;
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    FIXED_IO_ps_clk : inout STD_LOGIC;
+    FIXED_IO_ps_porb : inout STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -60,17 +68,9 @@ architecture STRUCTURE of design_1_wrapper is
     DDR_dq : inout STD_LOGIC_VECTOR ( 15 downto 0 );
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 1 downto 0 );
     DDR_dqs_p : inout STD_LOGIC_VECTOR ( 1 downto 0 );
-    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 31 downto 0 );
-    FIXED_IO_ddr_vrn : inout STD_LOGIC;
-    FIXED_IO_ddr_vrp : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC;
-    FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
-    sdata_0_out_0 : out STD_LOGIC;
-    sclk_out_0 : out STD_LOGIC;
     lrclk_out_0 : out STD_LOGIC;
-    irq_0 : out STD_LOGIC;
-    sdata_0_in_0 : in STD_LOGIC
+    sclk_out_0 : out STD_LOGIC;
+    MCLK : out STD_LOGIC
   );
   end component design_1;
 begin
@@ -97,7 +97,7 @@ design_1_i: component design_1
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      irq_0 => irq_0,
+      MCLK => MCLK,
       lrclk_out_0 => lrclk_out_0,
       sclk_out_0 => sclk_out_0,
       sdata_0_in_0 => sdata_0_in_0,

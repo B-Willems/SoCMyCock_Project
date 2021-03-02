@@ -1,0 +1,174 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rLoadSampleRight_reg/D|
+|               clk_fpga_0 |               clk_fpga_1 | design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rLoadSampleLeft_reg/R|
+|               clk_fpga_0 |               clk_fpga_1 |                           design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rChannelCount_reg[0]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                           design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rChannelCount_reg[1]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                                design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteValid_reg/R|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rLRClkDelayed_reg/R|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[13]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[14]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[15]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[12]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                  design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/FSM_onehot_stmFIFOWriteCtrl_reg[2]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                  design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/FSM_onehot_stmFIFOWriteCtrl_reg[1]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                  design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/FSM_onehot_stmFIFOWriteCtrl_reg[0]/S|
+|               clk_fpga_0 |               clk_fpga_1 |                          design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rAudOverflowInhib_reg/S|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[16]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[17]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[18]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[19]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                         design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[2]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                         design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[3]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                         design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[1]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                         design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[0]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[23]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                         design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[4]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[20]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                         design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[5]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                         design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[6]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                         design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[7]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[22]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[21]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                 design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk2[1].mclk_rAudValid_reg[1]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                                design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rReadCh0_reg/R|
+|               clk_fpga_0 |               clk_fpga_1 |                       design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rReadFIFOInitDone_reg/R|
+|               clk_fpga_0 |               clk_fpga_1 |                    design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rAudioUnderflowInhib_reg/S|
+|               clk_fpga_0 |               clk_fpga_1 |                 design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk2[0].mclk_rAudValid_reg[0]/R|
+|               clk_fpga_0 |               clk_fpga_1 |               design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/FSM_sequential_stmAudChCtrl_reg[0]/R|
+|               clk_fpga_0 |               clk_fpga_1 |               design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/FSM_sequential_stmAudChCtrl_reg[1]/R|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rLRClkDelayed_reg/R|
+|               clk_fpga_0 |               clk_fpga_1 |                           design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rReadFromFIFO_reg/R|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/AXIS_FIFO_INST/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/AXIS_FIFO_INST/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wr_rst_busy_ic_reg/D|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/AXIS_FIFO_INST/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[0]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[18]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[15]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[14]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[17]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                              design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[4]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                    design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].mclk_rAudValid_reg[0]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                              design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[8]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[27]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[19]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[13]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[11]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[22]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[23]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                              design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[6]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[24]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                              design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[7]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[25]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[26]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[20]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[21]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                              design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[9]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                              design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[5]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[12]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[10]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                             design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWriteData_reg[16]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                         design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[9]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[11]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                         design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[8]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                        design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[10]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                      design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[5]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                      design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[6]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                      design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[7]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                      design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[4]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[22]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[23]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[20]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[21]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[17]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[18]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[16]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[19]/R|
+|               clk_fpga_0 |               clk_fpga_1 |     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rLRClkIn_reg/D|
+|               clk_fpga_0 |               clk_fpga_1 |                      design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[0]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                      design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[2]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                      design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[3]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                      design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[1]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[12]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[13]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[14]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[15]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                      design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[9]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[10]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                     design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[11]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                      design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/mclk_rWaveGenCounter_reg[8]/R|
+|               clk_fpga_0 |               clk_fpga_1 |                       design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/CDC_AUDOVF_INST/src_in_ff_reg/D|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/AXIS_FIFO_INST/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[2]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                  design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/CDC_AUDUFLOW_INST/src_in_ff_reg/D|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/AXIS_FIFO_INST/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[4]/D|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/AXIS_FIFO_INST/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[3]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                    design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/CDC_AUDOVF_INST/src_level_ff_reg/D|
+|               clk_fpga_0 |               clk_fpga_1 |               design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/CDC_AUDUFLOW_INST/src_level_ff_reg/D|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/AXIS_FIFO_INST/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rst_seq_reentered_reg/D|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/AXIS_FIFO_INST/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg/D|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/AXIS_FIFO_INST/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_wr_rst_ic_reg/D|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[21]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[22]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[23]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |    design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[1]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[20]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[27]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[28]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |    design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[2]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |    design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[8]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[16]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[17]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[24]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[19]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[29]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[30]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[31]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[11]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[12]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[13]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |    design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[0]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[10]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |    design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[5]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |    design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[6]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |    design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[4]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |    design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[7]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[18]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[26]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |    design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[9]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[25]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[14]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |   design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[15]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |    design_1_i/i2s_receiver_0/inst/I2S_RX_V1_0_SYS_INST/genblk3[0].I2S_RX_V1_0_SER_INST/rSDataIn_reg[3]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[15]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[17]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[12]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[25]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[30]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[31]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[11]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[29]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[6]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[8]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[9]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[26]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[23]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[3]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[5]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[10]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[22]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[13]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[24]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[21]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[0]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[4]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[16]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[7]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[2]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[20]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[27]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[28]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[18]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[19]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[1]/CE|
+|               clk_fpga_0 |               clk_fpga_1 |design_1_i/i2s_transmitter_0/inst/I2S_TX_V1_0_SYS_INST/genblk4[0].I2S_TX_V1_0_SER_INST/rSDataOut_reg[14]/CE|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

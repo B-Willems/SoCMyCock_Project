@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Feb 27 14:11:18 2021
+# Process ID: 10344
+# Current directory: D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9956 D:\Downloads\SoCMyCock_Project-main\vivado\Synthesizer_project\Synthesizer_project.xpr
+# Log file: D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/vivado.log
+# Journal file: D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Downloads/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.xpr
+update_compile_order -fileset sources_1
+update_module_reference design_1_vhdl_clockdivider_by_0_0
+update_module_reference design_1_vhdl_clockdivider_by_1_0
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list sdata_0_in_0]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list irq_0]]
+set_property package_pin "" [get_ports [list  lrclk_out_0]]
+set_property package_pin "" [get_ports [list  sclk_out_0]]
+set_property package_pin "" [get_ports [list  sdata_0_in_0]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1

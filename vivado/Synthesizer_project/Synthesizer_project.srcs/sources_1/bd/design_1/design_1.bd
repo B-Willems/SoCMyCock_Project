@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE0896902AC289A13",
+      "boundary_crc": "0xA7F143B594918FED",
       "device": "xc7z007sclg225-1",
       "gen_directory": "../../../../Synthesizer_project.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -96,28 +96,31 @@
       "sdata_0_out_0": {
         "direction": "O"
       },
-      "sclk_out_0": {
-        "direction": "O"
+      "sdata_0_in_0": {
+        "direction": "I"
       },
       "lrclk_out_0": {
         "direction": "O"
       },
-      "irq_0": {
-        "type": "intr",
+      "sclk_out_0": {
+        "direction": "O"
+      },
+      "MCLK": {
         "direction": "O",
         "parameters": {
-          "PortWidth": {
-            "value": "1",
-            "value_src": "default"
+          "CLK_DOMAIN": {
+            "value": "design_1_processing_system7_0_0_FCLK_CLK1",
+            "value_src": "default_prop"
           },
-          "SENSITIVITY": {
-            "value": "LEVEL_HIGH",
-            "value_src": "const_prop"
+          "FREQ_HZ": {
+            "value": "22580647",
+            "value_src": "user_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
           }
         }
-      },
-      "sdata_0_in_0": {
-        "direction": "I"
       }
     },
     "components": {
@@ -368,7 +371,7 @@
             "value": "22.579"
           },
           "PCW_FPGA2_PERIPHERAL_FREQMHZ": {
-            "value": "2.822375"
+            "value": "50"
           },
           "PCW_FPGA3_PERIPHERAL_FREQMHZ": {
             "value": "50"
@@ -1718,18 +1721,6 @@
           }
         },
         "interface_nets": {
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
-          "m00_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
-            ]
-          },
           "xbar_to_m00_couplers": {
             "interface_ports": [
               "xbar/M00_AXI",
@@ -1752,6 +1743,18 @@
             "interface_ports": [
               "S00_AXI",
               "s00_couplers/S_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
+          "m00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
             ]
           }
         },
@@ -1836,22 +1839,16 @@
       }
     },
     "interface_nets": {
-      "ps7_0_axi_periph_M01_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M01_AXI",
-          "i2s_transmitter_0/s_axi_ctrl"
-        ]
-      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
         ]
       },
-      "processing_system7_0_DDR": {
+      "ps7_0_axi_periph_M01_AXI": {
         "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
+          "ps7_0_axi_periph/M01_AXI",
+          "i2s_transmitter_0/s_axi_ctrl"
         ]
       },
       "processing_system7_0_M_AXI_GP0": {
@@ -1864,6 +1861,12 @@
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
           "i2s_receiver_0/s_axi_ctrl"
+        ]
+      },
+      "processing_system7_0_DDR": {
+        "interface_ports": [
+          "DDR",
+          "processing_system7_0/DDR"
         ]
       }
     },
@@ -1894,22 +1897,6 @@
           "sdata_0_out_0"
         ]
       },
-      "i2s_transmitter_0_sclk_out": {
-        "ports": [
-          "sclk_out_0"
-        ]
-      },
-      "i2s_transmitter_0_lrclk_out": {
-        "ports": [
-          "lrclk_out_0"
-        ]
-      },
-      "i2s_transmitter_0_irq": {
-        "ports": [
-          "i2s_transmitter_0/irq",
-          "irq_0"
-        ]
-      },
       "sdata_0_in_0_1": {
         "ports": [
           "sdata_0_in_0",
@@ -1919,16 +1906,18 @@
       "vhdl_clockdivider_by_0_clk_out1": {
         "ports": [
           "vhdl_clockdivider_by_0/clk_out1",
-          "vhdl_clockdivider_by_1/clk_in",
           "i2s_receiver_0/sclk_in",
-          "i2s_transmitter_0/sclk_in"
+          "i2s_transmitter_0/sclk_in",
+          "vhdl_clockdivider_by_1/clk_in",
+          "sclk_out_0"
         ]
       },
       "vhdl_clockdivider_by_1_clk_out1": {
         "ports": [
           "vhdl_clockdivider_by_1/clk_out1",
           "i2s_receiver_0/lrclk_in",
-          "i2s_transmitter_0/lrclk_in"
+          "i2s_transmitter_0/lrclk_in",
+          "lrclk_out_0"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -1951,7 +1940,8 @@
           "processing_system7_0/FCLK_CLK1",
           "i2s_receiver_0/aud_mclk",
           "i2s_transmitter_0/aud_mclk",
-          "vhdl_clockdivider_by_0/clk_in"
+          "vhdl_clockdivider_by_0/clk_in",
+          "MCLK"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {

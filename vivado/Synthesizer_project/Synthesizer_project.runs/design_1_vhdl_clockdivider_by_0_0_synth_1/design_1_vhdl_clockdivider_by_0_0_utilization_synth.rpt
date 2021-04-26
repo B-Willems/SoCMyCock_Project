@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Tue Mar  2 11:51:10 2021
-| Host         : DESKTOP-N24P1LS running 64-bit major release  (build 9200)
+| Date         : Tue Mar  2 12:59:39 2021
+| Host         : DESKTOP-MHB0GHL running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_vhdl_clockdivider_by_0_0_utilization_synth.rpt -pb design_1_vhdl_clockdivider_by_0_0_utilization_synth.pb
 | Design       : design_1_vhdl_clockdivider_by_0_0
 | Device       : 7z007sclg225-1

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="FileSystemImportWizard">
+		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
+		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
+		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\sammo\Desktop\AudioPlayer"/>
+			<item value="C:\Users\sammo\Desktop\AudioPlayer\SD\Wave"/>
+			<item value="C:\Users\sammo\Desktop\AudioPlayer\SD"/>
+			<item value="C:\Users\sammo\Desktop\AudioPlayer\ClockingWizard"/>
+			<item value="C:\Users\sammo\Desktop"/>
+		</list>
+	</section>
+</section>

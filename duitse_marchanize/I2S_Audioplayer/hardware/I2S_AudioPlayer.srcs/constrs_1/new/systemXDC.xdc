@@ -1,0 +1,15 @@
+set_property PACKAGE_PIN P13 [get_ports MCLK]
+set_property IOSTANDARD LVCMOS33 [get_ports MCLK]
+set_property IOSTANDARD LVCMOS33 [get_ports LRCLK]
+set_property IOSTANDARD LVCMOS33 [get_ports SCLK]
+set_property IOSTANDARD LVCMOS33 [get_ports SD]
+set_property PACKAGE_PIN P14 [get_ports LRCLK]
+set_property PACKAGE_PIN N11 [get_ports SCLK]
+set_property PACKAGE_PIN N12 [get_ports SD]
+set_property IOSTANDARD LVCMOS33 [get_ports Clock125]
+set_property IOSTANDARD DIFF_SSTL15_T_DCI [get_ports {DDR_dqs_n[1]}]
+set_property IOSTANDARD DIFF_SSTL15_T_DCI [get_ports {DDR_dqs_n[0]}]
+
+
+set_property CLOCK_DEDICATED_ROUTE TRUE [get_nets System_i/ClockingWizard/inst/CLK_CORE_DRP_I/clk_inst/clk_in1_System_clk_wiz_0_0]
+set_property PACKAGE_PIN L12 [get_ports Clock125]

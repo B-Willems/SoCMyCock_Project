@@ -1,0 +1,39 @@
+
+
+#include "xstatus.h"
+#include "AudioPlayer.h"
+
+int main(void)
+{
+	xil_printf("-----------I2S Audio player-----------\r\n");
+	xil_printf("\r\n");
+
+	if(AudioPlayer_Init() != XST_SUCCESS)
+	{
+		xil_printf("[ERROR] Can not initialize audio player. Abort...\n\r");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Uncomment this to play the internal test signal
+	 */
+	AudioPlayer_SendTestSignal(40000);
+	while(AudioPlayer_IsBusy());
+	xil_printf("[INFO] Finished!\n\r");
+
+	while(1)
+	{
+		/*
+		if(AudioPlayer_LoadFile("Single_Left.wav"))
+		{
+			xil_printf("[ERROR] Can not open Audio file!\n\r");
+			return XST_FAILURE;
+		}*/
+		AudioPlayer_SendTestSignal(40000);
+
+		while(AudioPlayer_IsBusy());
+		xil_printf("[INFO] Finished!\n\r");
+	}
+
+	return XST_SUCCESS;
+}

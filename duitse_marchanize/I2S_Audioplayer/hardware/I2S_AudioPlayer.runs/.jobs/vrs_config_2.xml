@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="System_processing_system7_0_0_synth_1" LaunchDir="D:/Downloads/ZYBO-master/projects/DigitalAudio/I2S_Audioplayer/hardware/I2S_AudioPlayer.runs/System_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="System_axi_fifo_mm_s_0_0_synth_1" LaunchDir="D:/Downloads/ZYBO-master/projects/DigitalAudio/I2S_Audioplayer/hardware/I2S_AudioPlayer.runs/System_axi_fifo_mm_s_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="System_rst_ProcessingSystem_100M_0_synth_1" LaunchDir="D:/Downloads/ZYBO-master/projects/DigitalAudio/I2S_Audioplayer/hardware/I2S_AudioPlayer.runs/System_rst_ProcessingSystem_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="System_clk_wiz_0_0_synth_1" LaunchDir="D:/Downloads/ZYBO-master/projects/DigitalAudio/I2S_Audioplayer/hardware/I2S_AudioPlayer.runs/System_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="System_AXIS_I2S_Transmitter_0_0_synth_1" LaunchDir="D:/Downloads/ZYBO-master/projects/DigitalAudio/I2S_Audioplayer/hardware/I2S_AudioPlayer.runs/System_AXIS_I2S_Transmitter_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="System_Reset_ProcessingSystem_0_synth_1" LaunchDir="D:/Downloads/ZYBO-master/projects/DigitalAudio/I2S_Audioplayer/hardware/I2S_AudioPlayer.runs/System_Reset_ProcessingSystem_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="System_xbar_0_synth_1" LaunchDir="D:/Downloads/ZYBO-master/projects/DigitalAudio/I2S_Audioplayer/hardware/I2S_AudioPlayer.runs/System_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="System_auto_pc_0_synth_1" LaunchDir="D:/Downloads/ZYBO-master/projects/DigitalAudio/I2S_Audioplayer/hardware/I2S_AudioPlayer.runs/System_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

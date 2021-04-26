@@ -33,4 +33,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_vh
 # IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
 
-# XDC: c:/FPGA/SoCMyCock_Project-main/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/design_1_ooc.xdc
+# XDC: e:/github/SoCMyCock_Project/vivado/Synthesizer_project/Synthesizer_project.gen/sources_1/bd/design_1/design_1_ooc.xdc

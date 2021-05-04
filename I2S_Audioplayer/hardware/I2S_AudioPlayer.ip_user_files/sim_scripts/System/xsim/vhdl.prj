@@ -1,0 +1,22 @@
+vhdl xil_defaultlib  \
+"../../../bd/System/ip/System_axi_fifo_mm_s_0_0/sim/System_axi_fifo_mm_s_0_0.vhd" \
+"../../../bd/System/ip/System_rst_ProcessingSystem_100M_0/sim/System_rst_ProcessingSystem_100M_0.vhd" \
+"../../../bd/System/ip/System_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/System_clk_wiz_0_0_conv_funs_pkg.vhd" \
+"../../../bd/System/ip/System_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/System_clk_wiz_0_0_proc_common_pkg.vhd" \
+"../../../bd/System/ip/System_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/System_clk_wiz_0_0_ipif_pkg.vhd" \
+"../../../bd/System/ip/System_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/System_clk_wiz_0_0_family_support.vhd" \
+"../../../bd/System/ip/System_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/System_clk_wiz_0_0_family.vhd" \
+"../../../bd/System/ip/System_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/System_clk_wiz_0_0_soft_reset.vhd" \
+"../../../bd/System/ip/System_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/System_clk_wiz_0_0_pselect_f.vhd" \
+"../../../bd/System/ip/System_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/System_clk_wiz_0_0_address_decoder.vhd" \
+"../../../bd/System/ip/System_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/System_clk_wiz_0_0_slave_attachment.vhd" \
+"../../../bd/System/ip/System_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/System_clk_wiz_0_0_axi_lite_ipif.vhd" \
+"../../../bd/System/ip/System_clk_wiz_0_0/System_clk_wiz_0_0_clk_wiz_drp.vhd" \
+"../../../bd/System/ip/System_clk_wiz_0_0/System_clk_wiz_0_0_axi_clk_config.vhd" \
+"../../../bd/System/ipshared/6f97/hdl/I2S_Transmitter.vhd" \
+"../../../bd/System/ipshared/6f97/hdl/AXIS_I2S.vhd" \
+"../../../bd/System/ip/System_AXIS_I2S_Transmitter_0_0/sim/System_AXIS_I2S_Transmitter_0_0.vhd" \
+"../../../bd/System/ip/System_Reset_ProcessingSystem_0/sim/System_Reset_ProcessingSystem_0.vhd" \
+"../../../bd/System/sim/System.vhd" \
+
+nosort

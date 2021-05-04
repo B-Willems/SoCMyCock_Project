@@ -1,0 +1,255 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue May  4 09:27:21 2021
+| Host         : DESKTOP-N24P1LS running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file System_wrapper_bus_skew_routed.rpt -pb System_wrapper_bus_skew_routed.pb -rpx System_wrapper_bus_skew_routed.rpx
+| Design       : System_wrapper
+| Device       : 7z007s-clg225
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+Table of Contents
+-----------------
+1. Bus Skew Report Summary
+2. Bus Skew Report Per Constraint
+
+1. Bus Skew Report Summary
+--------------------------
+
+Id  Position  From                            To                              Corner  Requirement(ns)  Actual(ns)  Slack(ns)
+--  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
+1   11        [get_cells [list {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[0]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[10]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[11]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[12]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[13]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[14]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[15]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[16]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[17]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[18]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[19]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[1]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[20]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[21]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[22]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[23]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[24]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[25]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[26]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[27]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[28]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[29]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[2]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[30]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[31]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[3]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[4]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[5]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[6]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[7]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[8]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[9]}]]
+                                              [get_cells [list {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][0]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][10]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][11]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][12]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][13]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][14]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][15]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][16]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][17]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][18]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][19]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][1]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][20]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][21]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][22]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][23]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][24]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][25]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][26]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][27]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][28]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][29]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][2]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][30]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][31]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][3]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][4]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][5]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][6]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][7]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][8]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][9]}]]
+                                                                              Slow             20.000       1.740     18.260
+
+
+2. Bus Skew Report Per Constraint
+---------------------------------
+
+Id: 1
+set_bus_skew -from [get_cells [list {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[0]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[10]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[11]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[12]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[13]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[14]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[15]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[16]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[17]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[18]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[19]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[1]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[20]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[21]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[22]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[23]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[24]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[25]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[26]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[27]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[28]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[29]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[2]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[30]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[31]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[3]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[4]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[5]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[6]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[7]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[8]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[9]}]] -to [get_cells [list {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][0]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][10]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][11]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][12]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][13]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][14]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][15]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][16]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][17]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][18]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][19]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][1]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][20]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][21]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][22]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][23]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][24]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][25]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][26]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][27]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][28]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][29]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][2]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][30]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][31]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][3]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][4]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][5]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][6]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][7]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][8]} \
+          {System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][9]}]] 20.000
+Requirement: 20.000ns
+Endpoints: 32
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_fpga_0            ClkAudio_System_clk_wiz_0_0
+                                            System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][9]/D
+                                                                            System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][6]/D
+                                                                                                            Slow         1.740     18.260
+
+
+Slack (MET) :             18.260ns  (requirement - actual skew)
+  Endpoint Source:        System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0)
+  Endpoint Destination:   System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][9]/D
+                            (rising edge-triggered cell FDRE clocked by ClkAudio_System_clk_wiz_0_0)
+  Reference Source:       System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0)
+  Reference Destination:  System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][6]/D
+                            (rising edge-triggered cell FDRE clocked by ClkAudio_System_clk_wiz_0_0)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            20.000ns
+  Endpoint Relative Delay:    3.642ns
+  Reference Relative Delay:   2.136ns
+  Relative CRPR:              0.501ns
+  Uncertainty:                0.736ns
+  Actual Bus Skew:            1.740ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  System_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.938     1.938    System_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     2.039 r  System_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2661, routed)        1.667     3.706    System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_clk
+    SLICE_X7Y53          FDRE                                         r  System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y53          FDRE (Prop_fdre_C_Q)         0.419     4.125 r  System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[9]/Q
+                         net (fo=1, routed)           0.738     4.863    System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/async_path[9]
+    SLICE_X9Y56          FDRE                                         r  System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ClkAudio_System_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y17       BUFG                         0.000     0.000 r  System_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=1, routed)           1.490     1.490    System_i/ClockingWizard/inst/CLK_CORE_DRP_I/clk_inst/clk_in1
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.177    -1.687 r  System_i/ClockingWizard/inst/CLK_CORE_DRP_I/clk_inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.599    -0.088    System_i/ClockingWizard/inst/CLK_CORE_DRP_I/clk_inst/ClkAudio_System_clk_wiz_0_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     0.003 r  System_i/ClockingWizard/inst/CLK_CORE_DRP_I/clk_inst/clkout1_buf/O
+                         net (fo=197, routed)         1.497     1.500    System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_clk
+    SLICE_X9Y56          FDRE                                         r  System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][9]/C
+                         clock pessimism              0.000     1.500    
+    SLICE_X9Y56          FDRE (Setup_fdre_C_D)       -0.278     1.222    System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][9]
+  -------------------------------------------------------------------
+                         data arrival                           4.863    
+                         clock arrival                          1.222    
+  -------------------------------------------------------------------
+                         relative delay                         3.642    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  System_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.666     1.666    System_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.757 r  System_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2661, routed)        1.538     3.295    System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_clk
+    SLICE_X5Y53          FDRE                                         r  System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y53          FDRE (Prop_fdre_C_Q)         0.367     3.662 r  System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/src_gray_ff_reg[6]/Q
+                         net (fo=1, routed)           0.364     4.026    System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/async_path[6]
+    SLICE_X5Y54          FDRE                                         r  System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ClkAudio_System_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y17       BUFG                         0.000     0.000 r  System_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=1, routed)           1.680     1.680    System_i/ClockingWizard/inst/CLK_CORE_DRP_I/clk_inst/clk_in1
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.538    -1.858 r  System_i/ClockingWizard/inst/CLK_CORE_DRP_I/clk_inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.760    -0.098    System_i/ClockingWizard/inst/CLK_CORE_DRP_I/clk_inst/ClkAudio_System_clk_wiz_0_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     0.003 r  System_i/ClockingWizard/inst/CLK_CORE_DRP_I/clk_inst/clkout1_buf/O
+                         net (fo=197, routed)         1.717     1.720    System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_clk
+    SLICE_X5Y54          FDRE                                         r  System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][6]/C
+                         clock pessimism              0.000     1.720    
+    SLICE_X5Y54          FDRE (Hold_fdre_C_D)         0.170     1.890    System_i/AXIS_I2S_Transmitter/U0/xpm_cdc_Data/dest_graysync_ff_reg[0][6]
+  -------------------------------------------------------------------
+                         data arrival                           4.026    
+                         clock arrival                          1.890    
+  -------------------------------------------------------------------
+                         relative delay                         2.136    
+
+
+

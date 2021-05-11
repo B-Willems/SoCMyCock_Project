@@ -253,9 +253,9 @@ type mem_type is array (0 to 31) of std_logic_vector(31 downto 0);
 
 signal ram_clk_config : mem_type := (
 -- initialize memory with valid clock configuration
-   X"06EE2A07", 
+   X"04FA3D01", 
    X"00000000",
-   X"00047D3E", 
+   X"0004FA3D", 
    X"00000000",
    X"0000C350",
    X"00000001",
@@ -321,8 +321,8 @@ signal load_enable_reg_actual         :std_logic;
 signal SEN         :std_logic;
 signal Reset_axi         :std_logic;
 signal load_enable_reg           :std_logic_vector(0 to 31);
-signal clkfbout_reg           :std_logic_vector(0 to 31) := X"06EE2A07";
-signal clkout0_reg           :std_logic_vector(0 to 31) := X"00047D3E" ;
+signal clkfbout_reg           :std_logic_vector(0 to 31) := X"04FA3D01";
+signal clkout0_reg           :std_logic_vector(0 to 31) := X"0004FA3D" ;
 signal config_reg           :std_logic_vector(0 to 31);
 begin
 
@@ -372,9 +372,9 @@ begin
     if (Bus2IP_Clk'event and Bus2IP_Clk='1') then
       if(Bus2IP_Rst = RESET_ACTIVE) then
        -- reset values
-	    ram_clk_config(0)  <=    X"06EE2A07";
+	    ram_clk_config(0)  <=    X"04FA3D01";
 	    ram_clk_config(1)  <=    X"00000000";
-	    ram_clk_config(2)  <=    X"00047D3E";
+	    ram_clk_config(2)  <=    X"0004FA3D";
 	    ram_clk_config(3)  <=    X"00000000";
 	    ram_clk_config(4)  <=    X"0000C350";
 	    ram_clk_config(5)  <=    X"00000001";
@@ -568,16 +568,16 @@ config_reg <= load_enable_reg(0 to 30) & load_enable_reg_d;
    clk_in1 => clk_in1
  );
 mmcm_drp_inst: System_clk_wiz_0_0_mmcm_drp generic map (
-  S1_CLKFBOUT_MULT          =>  42,
+  S1_CLKFBOUT_MULT          =>  61,
   S1_CLKFBOUT_PHASE         =>  0,
-  S1_CLKFBOUT_FRAC          =>  1774,
+  S1_CLKFBOUT_FRAC          =>  1274,
   S1_CLKFBOUT_FRAC_EN       =>  1, 
   S1_BANDWIDTH              => "OPTIMIZED",
-  S1_DIVCLK_DIVIDE          =>  7,
-  S1_CLKOUT0_DIVIDE         =>  62,
+  S1_DIVCLK_DIVIDE          =>  1,
+  S1_CLKOUT0_DIVIDE         =>  61,
   S1_CLKOUT0_PHASE          =>  0,
   S1_CLKOUT0_DUTY           =>  50000, 
-  S1_CLKOUT0_FRAC           =>  1149, 
+  S1_CLKOUT0_FRAC           =>  1274, 
   S1_CLKOUT0_FRAC_EN        =>  1,  
   
   S1_CLKOUT1_DIVIDE         =>  1,

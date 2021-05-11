@@ -1,0 +1,100 @@
+/*
+ * main.c
+ *
+ *  Copyright (C) Daniel Kampert, 2020
+ *	Website: www.kampis-elektroecke.de
+ *  File info: AXIS-I2S audio player for the ZYNQ 7000 SoC.
+
+  GNU GENERAL PUBLIC LICENSE:
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+  Errors and commissions should be reported to DanielKampert@kampis-elektroecke.de
+ */
+
+/** @file main.c
+ *  @brief AXIS-I2S audio player for the ZYNQ 7000 SoC.
+
+ *  Software for the AXI-I2S audio player from
+ *  https://www.kampis-elektroecke.de/fpga/digitale-audioverarbeitung//abspielen-von-wave-dateien/
+ *
+ *  @author Daniel Kampert
+ */
+
+#include "xstatus.h"
+#include "AudioPlayer.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_printf.h"
+#include "xil_types.h"
+#define BTN_ID XPAR_AXI_GPIO_0_DEVICE_ID
+
+#define BTN_CHANNEL 1
+#define BTN_MASK 0b11111111
+
+int main(void)
+{
+	XGpio_Config *cfg_ptr;
+	//XGpio led_device, btn_device;
+	u32 data;
+	xil_printf("-----------I2S Audio player-----------\r\n");
+	xil_printf("\r\n");
+
+	if(AudioPlayer_Init() != XST_SUCCESS)
+	{
+		xil_printf("[ERROR] Can not initialize audio player. Abort...\n\r");
+		return XST_FAILURE;
+	}
+		cfg_ptr = XGpio_LookupConfig(BTN_ID);
+		//XGpio_CfgInitialize(&btn_device, cfg_ptr, cfg_ptr->BaseAddress);
+		//XGpio_SetDataDirection(&btn_device, BTN_CHANNEL, BTN_MASK);
+	/*
+	 * Uncomment this to play the internal test signal
+	 */
+	//AudioPlayer_SendTestSignal(40000);
+	//while(AudioPlayer_IsBusy());
+	//xil_printf("[INFO] Finished!\n\r");
+
+	while(1)
+	{
+		/*
+		if(AudioPlayer_LoadFile("Single_Left.wav"))
+		{
+			xil_printf("[ERROR] Can not open Audio file!\n\r");
+			return XST_FAILURE;
+		}*/
+//
+//				data = XGpio_DiscreteRead(&btn_device, BTN_CHANNEL);
+//				data &= BTN_MASK;
+//				switch(data)
+//				{
+//				case 1: AudioPlayer_SendTestSignal(5000); 	break;
+//				case 2: AudioPlayer_SendTestSignal(10000); 	break;
+//				case 4: AudioPlayer_SendTestSignal(15000); 	break;
+//				case 8: AudioPlayer_SendTestSignal(20000); 	break;
+//				case 16: AudioPlayer_SendTestSignal(25000); break;
+//				case 32: AudioPlayer_SendTestSignal(40000); break;
+//				case 64: AudioPlayer_SendTestSignal(50000); break;
+//				case 128: AudioPlayer_SendTestSignal(60000);break;
+//				default:  break;
+//
+//				}
+
+		//AudioPlayer_SendTestSignal(40000,1);
+		AudioPlayer_SendTestSignal(4000,2);
+		//AudioPlayer_SendTestSignal(2,3);
+		//AudioPlayer_SendTestSignal(40000,4);
+				}
+
+	return XST_SUCCESS;
+}

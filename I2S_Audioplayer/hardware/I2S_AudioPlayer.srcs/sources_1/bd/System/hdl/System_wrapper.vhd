@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Tue May  4 09:24:20 2021
+--Date        : Tue May  4 13:09:36 2021
 --Host        : DESKTOP-N24P1LS running 64-bit major release  (build 9200)
 --Command     : generate_target System_wrapper.bd
 --Design      : System_wrapper
@@ -34,6 +34,7 @@ entity System_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    GPIO_0_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     LRCLK : out STD_LOGIC;
     MCLK : out STD_LOGIC;
     SCLK : out STD_LOGIC;
@@ -68,7 +69,8 @@ architecture STRUCTURE of System_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC
+    FIXED_IO_ps_porb : inout STD_LOGIC;
+    GPIO_0_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component System;
 begin
@@ -95,6 +97,7 @@ System_i: component System
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      GPIO_0_tri_i(7 downto 0) => GPIO_0_tri_i(7 downto 0),
       LRCLK => LRCLK,
       MCLK => MCLK,
       SCLK => SCLK,

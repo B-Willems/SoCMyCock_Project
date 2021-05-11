@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Synth" LaunchPart="xc7z007sclg225-1" LaunchTime="1620113084">
+<GenRun Id="Synth" LaunchPart="xc7z007sclg225-1" LaunchTime="1620126602">
   <File Type="PA-TCL" Name="System_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="System_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="System_wrapper_reports.tcl"/>
@@ -57,9 +57,12 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="System_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="System_axi_fifo_mm_s_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="System_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="System_rst_ProcessingSystem_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="System_AXIS_I2S_Transmitter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="System_processing_system7_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="System_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="System_Reset_ProcessingSystem_0"/>
 </GenRun>

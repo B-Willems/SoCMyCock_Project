@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="get_low" location="D:/Downloads/ZYBO-master/projects/DigitalAudio/I2S_Audioplayer/Vitis/get_low" platform="D:/Downloads/ZYBO-master/projects/DigitalAudio/I2S_Audioplayer/Vitis/Wrapper_Lower_freq/export/Wrapper_Lower_freq/Wrapper_Lower_freq.xpfm" platformUID="xilinx:minized::0.0(custom)" systemProject="get_low_system" sysConfig="Wrapper_Lower_freq" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="4c7735b8b457fc535fc28f9c19fb1099">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1069644869">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.121875240" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="sdx.custom.platform.repository.locations" value="D:\Downloads\ZYBO-master\projects\DigitalAudio\I2S_Audioplayer\Vitis\mc_wrap\export\mc_wrap"/>
+	<item key="sdx.custom.platform.repository.locations" value="D:\Downloads\ZYBO-master\projects\DigitalAudio\I2S_Audioplayer\Vitis\mc_wrap\export\mc_wrap;D:\Downloads\ZYBO-master\projects\DigitalAudio\I2S_Audioplayer\Vitis\Wrap_extra_buttons\export\Wrap_extra_buttons;D:\Downloads\ZYBO-master\projects\DigitalAudio\I2S_Audioplayer\Vitis\Wrapper_Lower_freq\export\Wrapper_Lower_freq"/>
 </section>

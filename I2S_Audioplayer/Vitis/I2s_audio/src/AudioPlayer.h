@@ -67,7 +67,7 @@
  /** @brief			Send the internal test signal to the audio output.
   *  @param	Cycles	Test signal cycles
   */
- void AudioPlayer_SendTestSignal(u32 Cycles);
+ void AudioPlayer_SendTestSignal(u32 Cycles, short int type);
 
  /** @brief	Stop audio playing.
   */

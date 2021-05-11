@@ -56,12 +56,12 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// ClkAudio__12.28801______0.000______50.0______473.813____351.816
+// ClkAudio__12.28100______0.000______50.0______671.189____644.951
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
 //----------------------------------------------------------------------------
-// __primary_________125.000____________0.010
+// __primary__________12.281____________0.010
 
 `timescale 1ps/1ps
 
@@ -133,15 +133,15 @@ wire clk_in2_System_clk_wiz_0_0;
     .CLKOUT4_CASCADE      ("FALSE"),
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
-    .DIVCLK_DIVIDE        (7),
-    .CLKFBOUT_MULT_F      (42.750),
+    .DIVCLK_DIVIDE        (1),
+    .CLKFBOUT_MULT_F      (61.250),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (62.125),
+    .CLKOUT0_DIVIDE_F     (61.250),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKIN1_PERIOD        (8.000))
+    .CLKIN1_PERIOD        (81.427))
   mmcm_adv_inst
     // Output clocks
    (

@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Tue Apr 20 12:31:25 2021
+-- Date        : Tue May  4 13:11:34 2021
 -- Host        : DESKTOP-N24P1LS running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/Downloads/ZYBO-master/projects/DigitalAudio/I2S_Audioplayer/hardware/I2S_AudioPlayer.srcs/sources_1/bd/System/ip/System_clk_wiz_0_0/System_clk_wiz_0_0_stub.vhdl

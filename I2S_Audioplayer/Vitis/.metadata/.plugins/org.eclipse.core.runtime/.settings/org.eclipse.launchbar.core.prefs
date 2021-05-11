@@ -1,7 +1,11 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:Debugger_I2s_audio-Default
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Debugger_I2s_audio-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_get_low-Default_1,org.eclipse.launchbar.core.descriptorType.default\:Debugger_get_low-Default_2,org.eclipse.launchbar.core.descriptorType.default\:Debugger_button_synth-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_get_low-Default
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_I2s_audio-Default/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_I2s_audio-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_button_synth-Default/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_button_synth-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_get_low-Default/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_get_low-Default_1/activeLaunchMode=run

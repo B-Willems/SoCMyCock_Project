@@ -160,12 +160,14 @@ proc create_root_design { parentCell } {
 
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
+  set GPIO_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 GPIO_0 ]
+
 
   # Create ports
   set LRCLK [ create_bd_port -dir O LRCLK ]
   set MCLK [ create_bd_port -dir O -type clk MCLK ]
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {12288013} \
+   CONFIG.FREQ_HZ {12281000} \
  ] $MCLK
   set SCLK [ create_bd_port -dir O SCLK ]
   set SD [ create_bd_port -dir O SD ]
@@ -179,10 +181,10 @@ proc create_root_design { parentCell } {
   # Create instance: ClockingWizard, and set properties
   set ClockingWizard [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 ClockingWizard ]
   set_property -dict [ list \
-   CONFIG.CLKIN1_JITTER_PS {80.0} \
+   CONFIG.CLKIN1_JITTER_PS {814.26} \
    CONFIG.CLKOUT1_DRIVES {BUFG} \
-   CONFIG.CLKOUT1_JITTER {473.813} \
-   CONFIG.CLKOUT1_PHASE_ERROR {351.816} \
+   CONFIG.CLKOUT1_JITTER {671.189} \
+   CONFIG.CLKOUT1_PHASE_ERROR {644.951} \
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {12.288} \
    CONFIG.CLKOUT1_USED {true} \
    CONFIG.CLKOUT2_DRIVES {BUFG} \
@@ -194,12 +196,12 @@ proc create_root_design { parentCell } {
    CONFIG.CLK_OUT1_PORT {ClkAudio} \
    CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
    CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {42.750} \
-   CONFIG.MMCM_CLKIN1_PERIOD {8.000} \
-   CONFIG.MMCM_CLKIN2_PERIOD {10.000} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {62.125} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {61.250} \
+   CONFIG.MMCM_CLKIN1_PERIOD {81.427} \
+   CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {61.250} \
    CONFIG.MMCM_COMPENSATION {ZHOLD} \
-   CONFIG.MMCM_DIVCLK_DIVIDE {7} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {1} \
    CONFIG.PRIMITIVE {MMCM} \
    CONFIG.RESET_PORT {reset} \
    CONFIG.RESET_TYPE {ACTIVE_HIGH} \
@@ -218,7 +220,7 @@ proc create_root_design { parentCell } {
   # Create instance: ProcessingSystem_AXILite, and set properties
   set ProcessingSystem_AXILite [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ProcessingSystem_AXILite ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {2} \
+   CONFIG.NUM_MI {3} \
  ] $ProcessingSystem_AXILite
 
   # Create instance: Reset_Audio, and set properties
@@ -226,6 +228,17 @@ proc create_root_design { parentCell } {
 
   # Create instance: Reset_ProcessingSystem, and set properties
   set Reset_ProcessingSystem [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 Reset_ProcessingSystem ]
+
+  # Create instance: axi_gpio_0, and set properties
+  set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_INPUTS {1} \
+   CONFIG.C_ALL_OUTPUTS {0} \
+   CONFIG.C_GPIO_WIDTH {8} \
+   CONFIG.C_IS_DUAL {0} \
+   CONFIG.GPIO_BOARD_INTERFACE {Custom} \
+   CONFIG.USE_BOARD_FLOW {true} \
+ ] $axi_gpio_0
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -236,7 +249,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {50.000000} \
-   CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {125.000000} \
+   CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {12.280701} \
    CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_PCAP_PERIPHERAL_FREQMHZ {200.000000} \
@@ -267,7 +280,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_CAN_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_CAN_PERIPHERAL_FREQMHZ {100} \
    CONFIG.PCW_CLK0_FREQ {50000000} \
-   CONFIG.PCW_CLK1_FREQ {125000000} \
+   CONFIG.PCW_CLK1_FREQ {12280701} \
    CONFIG.PCW_CLK2_FREQ {10000000} \
    CONFIG.PCW_CLK3_FREQ {10000000} \
    CONFIG.PCW_CPU_CPU_6X4X_MAX_RANGE {667} \
@@ -334,11 +347,11 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_EN_UART1 {1} \
    CONFIG.PCW_EN_USB0 {1} \
    CONFIG.PCW_FCLK0_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {5} \
+   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {7} \
    CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {4} \
    CONFIG.PCW_FCLK1_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {4} \
-   CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {2} \
+   CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {19} \
+   CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {6} \
    CONFIG.PCW_FCLK2_PERIPHERAL_CLKSRC {IO PLL} \
    CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR1 {1} \
@@ -350,7 +363,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_FCLK_CLK2_BUF {FALSE} \
    CONFIG.PCW_FCLK_CLK3_BUF {FALSE} \
    CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {50} \
-   CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {125} \
+   CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {12.288} \
    CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA3_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA_FCLK0_ENABLE {1} \
@@ -375,8 +388,8 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_I2C_RESET_ENABLE {1} \
    CONFIG.PCW_I2C_RESET_POLARITY {Active Low} \
    CONFIG.PCW_I2C_RESET_SELECT {Share reset pin} \
-   CONFIG.PCW_IOPLL_CTRL_FBDIV {30} \
-   CONFIG.PCW_IO_IO_PLL_FREQMHZ {1000.000} \
+   CONFIG.PCW_IOPLL_CTRL_FBDIV {42} \
+   CONFIG.PCW_IO_IO_PLL_FREQMHZ {1400.000} \
    CONFIG.PCW_IRQ_F2P_INTR {1} \
    CONFIG.PCW_MIO_0_DIRECTION {inout} \
    CONFIG.PCW_MIO_0_IOTYPE {LVCMOS 3.3V} \
@@ -582,7 +595,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_PACKAGE_DDR_DQS_TO_CLK_DELAY_3 {-0.230} \
    CONFIG.PCW_PACKAGE_NAME {clg225} \
    CONFIG.PCW_PCAP_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_PCAP_PERIPHERAL_DIVISOR0 {5} \
+   CONFIG.PCW_PCAP_PERIPHERAL_DIVISOR0 {7} \
    CONFIG.PCW_PCAP_PERIPHERAL_FREQMHZ {200} \
    CONFIG.PCW_PJTAG_PERIPHERAL_ENABLE {0} \
    CONFIG.PCW_PLL_BYPASSMODE_ENABLE {0} \
@@ -595,7 +608,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_QSPI_GRP_SINGLE_SS_IO {MIO 1 .. 6} \
    CONFIG.PCW_QSPI_GRP_SS1_ENABLE {0} \
    CONFIG.PCW_QSPI_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_QSPI_PERIPHERAL_DIVISOR0 {5} \
+   CONFIG.PCW_QSPI_PERIPHERAL_DIVISOR0 {7} \
    CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {1} \
    CONFIG.PCW_QSPI_PERIPHERAL_FREQMHZ {200} \
    CONFIG.PCW_QSPI_QSPI_IO {MIO 1 .. 6} \
@@ -612,7 +625,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_SD1_PERIPHERAL_ENABLE {1} \
    CONFIG.PCW_SD1_SD1_IO {MIO 10 .. 15} \
    CONFIG.PCW_SDIO_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_SDIO_PERIPHERAL_DIVISOR0 {40} \
+   CONFIG.PCW_SDIO_PERIPHERAL_DIVISOR0 {56} \
    CONFIG.PCW_SDIO_PERIPHERAL_FREQMHZ {25} \
    CONFIG.PCW_SDIO_PERIPHERAL_VALID {1} \
    CONFIG.PCW_SINGLE_QSPI_DATA_MODE {x4} \
@@ -675,7 +688,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1} \
    CONFIG.PCW_UART1_UART1_IO {MIO 48 .. 49} \
    CONFIG.PCW_UART_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_UART_PERIPHERAL_DIVISOR0 {10} \
+   CONFIG.PCW_UART_PERIPHERAL_DIVISOR0 {14} \
    CONFIG.PCW_UART_PERIPHERAL_FREQMHZ {100} \
    CONFIG.PCW_UART_PERIPHERAL_VALID {1} \
    CONFIG.PCW_UIPARAM_ACT_DDR_FREQ_MHZ {533.333374} \
@@ -774,7 +787,9 @@ proc create_root_design { parentCell } {
   # Create interface connections
   connect_bd_intf_net -intf_net FIFO_AXI_STR_TXD [get_bd_intf_pins AXIS_I2S_Transmitter/AXIS_RXD] [get_bd_intf_pins FIFO/AXI_STR_TXD]
   connect_bd_intf_net -intf_net ProcessingSystem_AXILite_M01_AXI [get_bd_intf_pins ClockingWizard/s_axi_lite] [get_bd_intf_pins ProcessingSystem_AXILite/M01_AXI]
+  connect_bd_intf_net -intf_net ProcessingSystem_AXILite_M02_AXI [get_bd_intf_pins ProcessingSystem_AXILite/M02_AXI] [get_bd_intf_pins axi_gpio_0/S_AXI]
   connect_bd_intf_net -intf_net ProcessingSystem_axi_periph_M00_AXI [get_bd_intf_pins FIFO/S_AXI] [get_bd_intf_pins ProcessingSystem_AXILite/M00_AXI]
+  connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports GPIO_0] [get_bd_intf_pins axi_gpio_0/GPIO]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins ProcessingSystem_AXILite/S00_AXI] [get_bd_intf_pins processing_system7_0/M_AXI_GP0]
@@ -786,15 +801,16 @@ proc create_root_design { parentCell } {
   connect_bd_net -net ClockingWizard_ClkAudio [get_bd_ports MCLK] [get_bd_pins AXIS_I2S_Transmitter/MCLK] [get_bd_pins ClockingWizard/ClkAudio] [get_bd_pins Reset_Audio/slowest_sync_clk]
   connect_bd_net -net ClockingWizard_locked [get_bd_pins ClockingWizard/locked] [get_bd_pins Reset_Audio/dcm_locked]
   connect_bd_net -net FIFO_interrupt [get_bd_pins FIFO/interrupt] [get_bd_pins processing_system7_0/IRQ_F2P]
-  connect_bd_net -net ProcessingSystem_FCLK_CLK0 [get_bd_pins AXIS_I2S_Transmitter/ACLK] [get_bd_pins ClockingWizard/s_axi_aclk] [get_bd_pins FIFO/s_axi_aclk] [get_bd_pins ProcessingSystem_AXILite/ACLK] [get_bd_pins ProcessingSystem_AXILite/M00_ACLK] [get_bd_pins ProcessingSystem_AXILite/M01_ACLK] [get_bd_pins ProcessingSystem_AXILite/S00_ACLK] [get_bd_pins Reset_ProcessingSystem/slowest_sync_clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
+  connect_bd_net -net ProcessingSystem_FCLK_CLK0 [get_bd_pins AXIS_I2S_Transmitter/ACLK] [get_bd_pins ClockingWizard/s_axi_aclk] [get_bd_pins FIFO/s_axi_aclk] [get_bd_pins ProcessingSystem_AXILite/ACLK] [get_bd_pins ProcessingSystem_AXILite/M00_ACLK] [get_bd_pins ProcessingSystem_AXILite/M01_ACLK] [get_bd_pins ProcessingSystem_AXILite/M02_ACLK] [get_bd_pins ProcessingSystem_AXILite/S00_ACLK] [get_bd_pins Reset_ProcessingSystem/slowest_sync_clk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
   connect_bd_net -net ProcessingSystem_FCLK_RESET0_N [get_bd_pins Reset_Audio/ext_reset_in] [get_bd_pins Reset_ProcessingSystem/ext_reset_in] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
   connect_bd_net -net Reset_Audio_peripheral_aresetn [get_bd_pins AXIS_I2S_Transmitter/nReset] [get_bd_pins Reset_Audio/peripheral_aresetn]
-  connect_bd_net -net Reset_ProcessingSystem_peripheral_aresetn [get_bd_pins AXIS_I2S_Transmitter/ARESETn] [get_bd_pins ClockingWizard/s_axi_aresetn] [get_bd_pins FIFO/s_axi_aresetn] [get_bd_pins ProcessingSystem_AXILite/ARESETN] [get_bd_pins ProcessingSystem_AXILite/M00_ARESETN] [get_bd_pins ProcessingSystem_AXILite/M01_ARESETN] [get_bd_pins ProcessingSystem_AXILite/S00_ARESETN] [get_bd_pins Reset_ProcessingSystem/peripheral_aresetn]
+  connect_bd_net -net Reset_ProcessingSystem_peripheral_aresetn [get_bd_pins AXIS_I2S_Transmitter/ARESETn] [get_bd_pins ClockingWizard/s_axi_aresetn] [get_bd_pins FIFO/s_axi_aresetn] [get_bd_pins ProcessingSystem_AXILite/ARESETN] [get_bd_pins ProcessingSystem_AXILite/M00_ARESETN] [get_bd_pins ProcessingSystem_AXILite/M01_ARESETN] [get_bd_pins ProcessingSystem_AXILite/M02_ARESETN] [get_bd_pins ProcessingSystem_AXILite/S00_ARESETN] [get_bd_pins Reset_ProcessingSystem/peripheral_aresetn] [get_bd_pins axi_gpio_0/s_axi_aresetn]
   connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins ClockingWizard/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK1]
 
   # Create address segments
   assign_bd_address -offset 0x43C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs ClockingWizard/s_axi_lite/Reg] -force
   assign_bd_address -offset 0x43C10000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs FIFO/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x41200000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] -force
 
 
   # Restore current instance

@@ -20,3 +20,16 @@ domain active {zynq_fsbl}
 domain active {standalone_ps7_cortexa9_0}
 platform generate -quick
 platform generate
+platform generate
+platform active {Wrapper_Lower_freq}
+domain active {zynq_fsbl}
+domain active {standalone_ps7_cortexa9_0}
+bsp reload
+bsp reload
+platform generate -domains 
+bsp config stdin "ps7_uart_1"
+bsp config stdout "ps7_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_ps7_cortexa9_0 

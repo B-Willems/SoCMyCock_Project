@@ -44,12 +44,14 @@
 
 int main(void)
 {
-	XGpio_Config *cfg_ptr;
+	XGpio gpio;
+	XGpio_Initialize(&gpio, XPAR_GPIO_0_DEVICE_ID);
+	XGpio_SetDataDirection(&gpio, 1, 0x00000000);
 	//XGpio led_device, btn_device;
 	u32 data;
 	xil_printf("-----------I2S Audio player-----------\r\n");
 	xil_printf("\r\n");
-
+	int  state = 0;
 	if(AudioPlayer_Init() != XST_SUCCESS)
 	{
 		xil_printf("[ERROR] Can not initialize audio player. Abort...\n\r");
@@ -64,7 +66,7 @@ int main(void)
 	//AudioPlayer_SendTestSignal(40000);
 	//while(AudioPlayer_IsBusy());
 	//xil_printf("[INFO] Finished!\n\r");
-
+long int counter;
 	while(1)
 	{
 		/*
@@ -74,8 +76,8 @@ int main(void)
 			return XST_FAILURE;
 		}*/
 //
-//				data = XGpio_DiscreteRead(&btn_device, BTN_CHANNEL);
-//				data &= BTN_MASK;
+			data = XGpio_DiscreteRead(&btn_device, BTN_CHANNEL);
+			data &= BTN_MASK;
 //				switch(data)
 //				{
 //				case 1: AudioPlayer_SendTestSignal(5000); 	break;
@@ -90,11 +92,28 @@ int main(void)
 //
 //				}
 
-		AudioPlayer_SendTestSignal(40000,1,3);
-		//AudioPlayer_SendTestSignal(4000,2);
-		//AudioPlayer_SendTestSignal(2,3);
-		//AudioPlayer_SendTestSignal(40000,4,4);
-				}
 
+
+
+		switch(state){
+		case 0 : AudioPlayer_SendTestSignal(40000,1,1); break;
+		case 1 : AudioPlayer_SendTestSignal(40000,1,2); break;
+		case 2 : AudioPlayer_SendTestSignal(40000,1,3); break;
+		case 3 : AudioPlayer_SendTestSignal(40000,2,1); break;
+		case 4 : AudioPlayer_SendTestSignal(40000,2,2); break;
+		case 5 : AudioPlayer_SendTestSignal(40000,2,3); break;
+		case 6 : AudioPlayer_SendTestSignal(40000,3,1); break;
+		case 7 : AudioPlayer_SendTestSignal(40000,3,2); break;
+		case 8 : AudioPlayer_SendTestSignal(40000,3,3); break;
+		case 9 : AudioPlayer_SendTestSignal(40000,4,1); break;
+		case 10 : AudioPlayer_SendTestSignal(40000,4,2); break;
+		case 11 : AudioPlayer_SendTestSignal(40000,4,3); break;
+
+
+
+		}
+
+
+}
 	return XST_SUCCESS;
 }

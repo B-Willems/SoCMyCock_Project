@@ -33,3 +33,13 @@ timestamp=[2021-05-14 16:19:17], mode=BUILD, duration=0:00:00.360, duration_ms=3
 timestamp=[2021-05-14 16:22:01], mode=BUILD, duration=0:00:00.988, duration_ms=988, data={name=Synthesiser, configuration=Debug, clean_build=false}
 timestamp=[2021-05-14 16:23:42], mode=BUILD, duration=0:00:02.091, duration_ms=2091, data={name=Synthesiser, configuration=Debug, clean_build=false}
 timestamp=[2021-05-14 16:26:06], mode=BUILD, duration=0:00:01.074, duration_ms=1074, data={name=Synthesiser, configuration=Debug, clean_build=false}
+timestamp=[2021-05-15 13:22:22], mode=WORKBENCH_START, duration=0:00:10.072, duration_ms=10072, data={}
+timestamp=[2021-05-15 13:22:22], mode=WORKBENCH_UI_INIT, duration=0:00:00.572, duration_ms=572, data={editors_count=24, platform_editors_count=12, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=LowerFreqButtons,RemoteSystemsTempFiles,Synthesiser,Synthesiser_system}
+timestamp=[2021-05-15 13:22:23], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.655, duration_ms=655, data={}
+timestamp=[2021-05-15 13:32:08], mode=BUILD, duration=0:00:00.797, duration_ms=797, data={name=Synthesiser, configuration=Debug, clean_build=false}
+timestamp=[2021-05-15 13:32:21], mode=BUILD, duration=0:00:00.511, duration_ms=511, data={name=Synthesiser, configuration=Debug, clean_build=false}
+timestamp=[2021-05-15 13:32:42], mode=BUILD, duration=0:00:01.097, duration_ms=1097, data={name=Synthesiser, configuration=Debug, clean_build=false}
+timestamp=[2021-05-15 13:40:58], mode=BUILD, duration=0:00:00.466, duration_ms=466, data={name=Synthesiser, configuration=Debug, clean_build=false}
+timestamp=[2021-05-15 14:02:30], mode=BUILD, duration=0:00:00.539, duration_ms=539, data={name=Synthesiser, configuration=Debug, clean_build=false}
+timestamp=[2021-05-15 14:05:58], mode=BUILD, duration=0:00:00.966, duration_ms=966, data={name=Synthesiser, configuration=Debug, clean_build=false}
+timestamp=[2021-05-15 14:48:23], mode=BUILD, duration=0:00:01.420, duration_ms=1420, data={name=Synthesiser, configuration=Debug, clean_build=false}

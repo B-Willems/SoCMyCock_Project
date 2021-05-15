@@ -16,7 +16,7 @@
 #define BIT2	0x04
 #define BIT3	0x08
 
-int GpioInputExample(u16 DeviceId, u32 *DataRead);
+void GpioInputExample(u16 DeviceId, u32 *DataRead);
 XGpio gpioOutput;
 XGpio GpioInput;
 
@@ -44,9 +44,11 @@ int main(void)
 
 	while(1)
 	{
+		char counter = 0;
+		if(counter == 0 ){
 
 				XGpio_DiscreteWrite(&gpioOutput, 2, BIT0);
-				Status = GpioInputExample(GPIO_INPUT_DEVICE_ID, &InputData);
+				GpioInputExample(GPIO_INPUT_DEVICE_ID, &InputData);
 				if (Status != XST_SUCCESS) {
 
 				}
@@ -54,27 +56,33 @@ int main(void)
 				{
 				case 14: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter,1); 	break;
 				case 13: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter,2); 	break;
-				case 12: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter,3); 	break;
+				case 11: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter,3); 	break;
 				case 7: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter,4); 	break;
 				default:  break;
 				}
+				counter++;
+		}
 
+				if(counter == 1){
 				XGpio_DiscreteWrite(&gpioOutput, 2, BIT1);
-				Status = GpioInputExample(GPIO_INPUT_DEVICE_ID, &InputData2);
-				if (Status != XST_SUCCESS) {
-
-					}
+				GpioInputExample(GPIO_INPUT_DEVICE_ID, &InputData2);
+				if (Status != XST_SUCCESS) {}
 				switch(InputData2)
 				{
 				case 14: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter,5); 	break;
 				case 13: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter,6); 	break;
-				case 12: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter,7); 	break;
+				case 11: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter,7); 	break;
 				case 7: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter,8); 	break;
 				default:  break;
 				}
+				counter++;
+			}
 
+
+
+				if(counter == 2){
 				XGpio_DiscreteWrite(&gpioOutput, 2, BIT2);
-				Status = GpioInputExample(GPIO_INPUT_DEVICE_ID, &InputData3);
+				GpioInputExample(GPIO_INPUT_DEVICE_ID, &InputData3);
 				if (Status != XST_SUCCESS) {
 
 					}
@@ -82,24 +90,29 @@ int main(void)
 				{
 				case 14: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter+1,1); 	break;
 				case 13: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter+1,2); 	break;
-				case 12: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter+1,3); 	break;
+				case 11: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter+1,3); 	break;
 				case 7: AudioPlayer_SendTestSignal(4000,soundType,octaveCounter+1,4); 	break;
 				default:  break;
 				}
+				counter++;
+			}
 
-				XGpio_DiscreteWrite(&gpioOutput, 2, BIT3);
-				Status = GpioInputExample(GPIO_INPUT_DEVICE_ID, &InputData4);
-				if (Status != XST_SUCCESS) {
-
-				}
-				switch(InputData4)
-				{
-				case 14: octaveCounter++;	if (octaveCounter >2){octaveCounter = 1;}	break;
-				case 13: octaveCounter--;	if (octaveCounter <1 ){octaveCounter = 2;}	break;
-				case 12: soundType++; 		if (soundType >4){soundType = 0;}			break;
-				case 7: soundType--; 		if (soundType <1){soundType = 4;}			break;
-				default:  break;
-				}
+//				if(counter == 3){
+//				XGpio_DiscreteWrite(&gpioOutput, 2, BIT2);
+//				GpioInputExample(GPIO_INPUT_DEVICE_ID, &InputData4);
+//				if (Status != XST_SUCCESS) {
+//
+//				}
+//				switch(InputData4)
+//				{
+//				case 14: octaveCounter++;	if (octaveCounter >2){octaveCounter = 1;}	break;
+//				case 13: octaveCounter--;	if (octaveCounter <1 ){octaveCounter = 2;}	break;
+//				case 11: soundType++; 		if (soundType >4){soundType = 0;}			break;
+//				case 7: soundType--; 		if (soundType <1){soundType = 4;}			break;
+//				default:  break;
+//				}
+//				counter++;
+//			}
 
 		}
 	  return XST_FAILURE;
@@ -107,14 +120,10 @@ int main(void)
 }
 
 
-int GpioInputExample(u16 DeviceId, u32 *DataRead)
+void GpioInputExample(u16 DeviceId, u32 *DataRead)
 {
-
-
 
 	 /* Read the state of the data so that it can be  verified */
 	 *DataRead = XGpio_DiscreteRead(&GpioInput, 1);
-
-
 
 }

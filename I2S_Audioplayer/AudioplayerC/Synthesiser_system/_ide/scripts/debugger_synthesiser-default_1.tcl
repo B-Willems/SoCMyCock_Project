@@ -25,4 +25,5 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow D:/GIT/SoCMyCock_Project/I2S_Audioplayer/AudioplayerC/Synthesiser/Debug/Synthesiser.elf
 configparams force-mem-access 0
-bpadd -addr &main
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
